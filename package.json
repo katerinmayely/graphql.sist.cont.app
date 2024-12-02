@@ -4,7 +4,9 @@
   "description": "GraphQL implementation for my Sistemas Expertos project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,17 @@
   "bugs": {
     "url": "https://github.com/katerinmayely/graphql.sist.cont.app/issues"
   },
-  "homepage": "https://github.com/katerinmayely/graphql.sist.cont.app#readme"
+  "homepage": "https://github.com/katerinmayely/graphql.sist.cont.app#readme",
+  "dependencies": {
+    "apollo-server": "3.13.0",
+    "apollo-server-express": "3.13.0",
+    "dotenv": "16.4.5",
+    "express": "4.21.1",
+    "graphql": "16.9.0",
+    "morgan": "1.10.0",
+    "mssql": "11.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.7"
+  }
 }
