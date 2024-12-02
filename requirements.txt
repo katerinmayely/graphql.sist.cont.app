@@ -1,0 +1,11 @@
+apollo-server
+express
+apollo-server-express
+dotenv
+
+graphql
+
+mssql
+morgan
+
+nodemon --save-dev para el hot reload

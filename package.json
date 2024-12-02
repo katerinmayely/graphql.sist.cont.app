@@ -1,0 +1,23 @@
+{
+  "name": "graphql_proyecto",
+  "version": "1.0.0",
+  "description": "GraphQL implementation for my Sistemas Expertos project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katerinmayely/graphql.sist.cont.app.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "gRPC"
+  ],
+  "author": "Kattherine Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katerinmayely/graphql.sist.cont.app/issues"
+  },
+  "homepage": "https://github.com/katerinmayely/graphql.sist.cont.app#readme"
+}
