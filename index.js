@@ -2,22 +2,18 @@ require('dotenv').config();
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express'); // Servidor que nos va ayudar a enviar las queries
 const morgan = require('morgan');
+const cors = require('cors');
+const typeDefs = require('./schema');
+const resolvers = require('./resolvers');
 
 const app = express();
 
-// Esquema TyprDefs
-const typeDefs = gql`
-    type Query {
-        hello: String
-    }
-`;
-
-// Definir los resolvers
-const resolvers = {
-    Query: {
-        hello: () => "Hola mundo"
-    }
+// Configuración de CORS
+const corsOptions = {
+    origin: 'https://studio.apollographql.com', // Permitir solo Apollo Studio
+    credentials: true, // Permitir cookies o credenciales
 };
+app.use(cors(corsOptions));
 
 app.use(morgan('dev'));
 
