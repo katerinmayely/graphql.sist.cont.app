@@ -1,5 +1,4 @@
 const {gql} = require('apollo-server-express')
-const { GraphQLScalarType, Kind } = require('graphql');
 
 const typeDefs = gql`
     scalar Date
@@ -19,7 +18,7 @@ const typeDefs = gql`
         id: ID!
         account_name: String!
         total: Float
-        trasacciones: [Transaccion]
+        transacciones: [Transaccion]
     }
 
     type Transaccion {
@@ -50,12 +49,18 @@ const typeDefs = gql`
         expired_at: Date
     }
 
+    type ConteoTransaccionesTag {
+        conteo: Int
+        tag: Etiqueta
+    }
+
     type Query {
-        usuario: Usuario
+        usuarios( email: String ): [Usuario]
         cuentas: [Cuenta]
-        transacciones: [Transaccion]
-        etiquetas: [Etiqueta]
+        transacciones: [Transaccion] 
+        etiquetas( id_user: Int ): [Etiqueta]
         codigos: [CodigoActivacion]
+        conteoTransaccionesTag ( id_user: Int ): [ConteoTransaccionesTag]
     }
 `;
 

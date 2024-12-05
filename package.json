@@ -23,13 +23,14 @@
   },
   "homepage": "https://github.com/katerinmayely/graphql.sist.cont.app#readme",
   "dependencies": {
-    "@graphql-tools/merge": "9.0.11",
+    "@graphql-tools/merge": "^9.0.11",
     "apollo-server": "3.13.0",
     "apollo-server-express": "3.13.0",
     "cors": "2.8.5",
     "dotenv": "16.4.5",
     "express": "4.21.1",
     "graphql": "16.9.0",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "1.10.0",
     "mssql": "11.0.1"
   },

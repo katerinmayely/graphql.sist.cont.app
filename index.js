@@ -5,22 +5,20 @@ const morgan = require('morgan');
 const cors = require('cors');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
+const authMiddleware = require('./middlewares/auth');
 
 const app = express();
 
-// Configuración de CORS
-const corsOptions = {
-    origin: 'https://studio.apollographql.com', // Permitir solo Apollo Studio
-    credentials: true, // Permitir cookies o credenciales
-};
-app.use(cors(corsOptions));
-
+app.use(cors());
 app.use(morgan('dev'));
+app.use(authMiddleware);
 
 const server = new ApolloServer({
     typeDefs,
-    resolvers
-
+    resolvers,
+    context: ({ req }) => {
+        return { user: req.user };
+    },
 });
 
 async function startServer() {

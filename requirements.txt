@@ -12,4 +12,6 @@ cors
 
 nodemon --save-dev para el hot reload
 
-graphql-pull-graphics
+@graphql-tools/merge
+
+jsonwebtoken
