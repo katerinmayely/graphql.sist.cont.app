@@ -6,7 +6,7 @@ const cuentasResolvers = {
             try {
                 const pool = await getConnection();
                 const result = await pool.request().query(`
-                        SELECT * FROM proyecto_expertos.tags;
+                        SELECT * FROM proyecto_expertos.accounts;
                     `)
                 return result.recordset
             } catch (error) {
